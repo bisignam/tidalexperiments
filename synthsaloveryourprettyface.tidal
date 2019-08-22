@@ -1,0 +1,17 @@
+cps 1
+-- t7 (wash (chop 4)
+d1 $ stack [ n "[f3, a3]" # s "superchip" # sustain 1 # delay 0.5 # delaytime 0.7, n "e5" # s "superchip" # sustain 1 # delay 0.4 ] # crush 2.4 # pan 0.5 # gain 0.8
+d1 silence
+d2 $ stack [ n "[f eb] a bs c" # s "superchip(6, 8)" # sustain "0.2 0.2 0.2 0.2 0.2 0.6 0.8" # delay 1 # delaytime 0.8 # cut 1, n "a5" # s "superchip" # delay 1 # delaytime 1 # delayfeedback 0.2 # hresonance 90 # crush 16 # cut 1] # gain 0.9 # crush 5
+d2 silence
+d3 $ stut 1 0.5 0.4 $ stack [ n "[e fs] [g a]? [b cb] d?" # s "superchip" # sustain "0.2 0.2 0.2 0.2 0.2 0.4 0.2" # pan (0.5 + 1*rand) # delay 0.4 # delaytime 0.7 # hresonance 10 # crush 4 # cut 1] # gain "0.9" # pan 0.4
+d3 silence
+d4 $ spread ($) [fast 1, fast 1, slow 4, striate 4, (# speed "0.8")] $ stack [s "[bassdm:21 hc:2 ho:4? bassdm:21?, hc ho hc hc, sn:4 ~ sn:5 ~]", n (choose [1, 4]) ] # delay 0.6 # delaytime 0.6 # pan 0.5 # crush 6 # cut 0
+d4 silence
+d5 $ stack [s "[[sn:5 hc] [ho, cp] [sn:5 hc] [ho, cp]]", n (choose [1, 6]), s "bass1:2" # crush 16 # speed 0.1 ] # gain 0.6 # pan 0.7
+d5 silence
+d6 $ trunc 0.6 $ spread ($) [fast 1, fast 1, slow 4, fast 2, (# speed "0.8")] $ stack [s "[bassdm:21 hc:2 ho:4? bassdm:21?, hc ho hc hc, sn:4 ~ sn:5 ~]", n (choose [1, 4]), s "bass1:9" # crush 2 # speed 0.2 # delay 0.6 # delaytime 0.6  ] # delay 0.6 # delaytime 0.6 # pan 0.5 # crush 6 # cut 0
+d6 silence
+d7 $ chop 4 $ striate 1 $ s "bass1" # gain 1.5 # speed 1.33 # sustain 4 # pan sine # delay 0.6 # delaytime 0.9
+d7 silence
+hush

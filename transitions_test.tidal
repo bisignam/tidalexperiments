@@ -1,0 +1,8 @@
+d5 $ sound "[bassdm:21 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 100
+d5 silence
+t5 (anticipateIn 4) $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 300
+t5 (clutch) $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 300
+t5 (clutchIn 4) $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 300
+t5 (wash (brak) 4) $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 300
+t5 xfade $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 4000
+t5 (mortal 1 4) $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 4000

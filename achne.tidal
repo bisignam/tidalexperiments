@@ -1,0 +1,20 @@
+cps 1
+d1 $ chop 4 $ s "bass1" # gain 1 # speed 1.33 # sustain 2 # pan 0.3 # delay 0.4 # delaytime 0.9
+t1 (xfade) $ chop 4 $ striate 2 $ s "bass1" # gain 1 # speed 1.33 # sustain 3 # pan 0.2 # delay 0.4 # delaytime 0.9
+t1 (clutchIn 8) $ silence
+d2 $ spread ($) [striate 2, fast 1, striate 1, fast 4] $ sound "outdoor" # gain 0.92
+t2 (xfade) $ spread ($) [striate 2, fast 1, fast 2, fast 4, fast 2] $ sound "outdoor" # crush 7 # gain 0.92
+t2 (clutchIn 8) $ silence
+d2 silence
+d3 $ chop 4 $ striate 1 $ up "5 3" # s "bass1" # gain 1.2 # speed 1.33 # sustain 3 # pan 0.7 # delay 0.6 # delaytime 0.9 # cut 0 # gain 0.8
+t3 (xfadeIn 8) $ silence
+d3 silence
+d4 $ chop 4 $ s "bass1" # gain 1.2 # speed 1.33 # sustain 3 # pan 1 # delay 0.6 # delaytime 0.9 # cut 0 # gain 1
+d4 silence
+d5 $ sound "[bassdm:21 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 100
+d5 silence
+t5 (wash (brak) 4) $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 2500
+t5 (clutch) $ sound "[bassdm:20 ~ ~ [sn:5, hc?]]" # gain 1.1 #cutoff 50
+d6 $ spread ($) [striate 2, fast 1, striate 1, fast 4] $ sound "birds:1" # speed "-4" # end "0.1" # shape 0.6 # gain 0.7
+d6 silence
+hush

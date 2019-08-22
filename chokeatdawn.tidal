@@ -1,0 +1,36 @@
+cps 0.5
+d4 $ stack [
+  every 4 (fast 2) $ n (run 8)
+  # sound "hoover(3,8)"
+--  # speed sine
+  # vowel "a"
+  # gain "0.5 0.6 0.7 0.8 0.9 1.0"
+  # cut (1 + irand 1)
+  # hresonance rand
+  # delaytime 1
+  # pan "0.5",
+  every 4 (fast 2) $ n (run 8)
+   # sound "hoover(3,8)",
+  -- # speed sine,
+  every 4 (fast 2) $ n 1
+    # sound "hoover(3,8)"
+    -- # speed sine
+] # crush (2 + saw*4) # cut 6 # gain 0.9
+
+
+d1 $ degrade $ sound "[[drumtraks:6 ~ ~ ~ drumtraks:9], [hc:2 ~ hc:2 ~ hc:2]] [[~ ~ ~ ~ ~ drumtraks:6 ~ drumtraks:9 ~ ~], [~ hc:2 ~ hc:2 ~ hc:2 hc:2 hc:2 hc:2 hc:2]]"
+    # speed "1 2"
+    # crush (0.5 + rand)
+
+d1 $ sound "[sn bd] [bd [sd sd sd sd sd sd sd sd] sd]"
+  # speed (run 20)
+  # crush 6
+
+d1 silence
+
+d2 $ every 2 (rev) $ n "5 2"
+  # sound "[hoover:5?, bass1*3]"
+  # speed "0.8 0.9"
+  # crush "0.9 10"
+
+d2 silence

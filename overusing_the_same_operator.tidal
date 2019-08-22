@@ -1,0 +1,13 @@
+d1 $ every 2 (fast 2) $ straite 4 $ n "2" # sound "tink" # up "2.3" # gain 1.5
+d1 silence
+d2 $ whenmod 8 4 (brak) $ every 2 (fast 2) $ striate 4 $ up "3 5? 3 7? 3 8" # sound "gtr" # delay 0.4 # delaytime 0.2
+d3 $ fast 3 $ sound "[sn:3 sn:3 sn:3 sn:3]" # delay 0.4 # delaytime 0.5 # pan saw # gain 0.93 # cutoff 3000
+d3 silence
+d1 $ s "supermandolin ~"
+d2 silence
+d5 $ sound "[bassdm:1 hc ho:4? hc ho]"
+d5 silence
+d3 silence
+d4 $ fast 4 $ up "8 10" # sound "gtr:1" # gain 0.8 # pan sine
+d4 silence
+hush

@@ -1,0 +1,7 @@
+d1 $ sometimes (# room (rand*10)) $ n (toScale Scales.hirajoshi "0 1 2? 3 4 5 6? 7") # sound "superpiano"  # delay 0.5 # delaytime 1
+
+d2 $ sometimesBy 0.6 (slow 2) $ sound "nastykick:1*8" # gain 1 # room (run 1) # size (run 50)  
+
+d3 $ sometimes (# room (rand*10)) $ n (toScale Scales.hirajoshi "[3, 7]") # sound "superhammond"  
+
+d7 $ sound "[alphabet:18 alphabet:1 alphabet:19 alphabet:1 alphabet:12]" # gain 0.7 # pan 1

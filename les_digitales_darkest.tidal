@@ -1,0 +1,47 @@
+cps 0.5
+
+--jux (rev)
+d1 $ striate 4 $ up "[c ~ ~ ~ c?]" $ n "e f" # sound "arpy" # delay 0.7 # delaytime 0.7 # pan rand # gain 0.7 # crush "7" # room 0.7
+
+d1 $ striate 4 $ n "c ~ ~ ~ c?" # sound "arpy" # delay 0.7 # delaytime 0.7 # pan 1 # gain 0.81 # crush "7" # room 0.5
+
+d2 $ striate 4 $ n "[c]*5" # sound "arpy" # delay 0.7 # delaytime 0.7 # pan 1 # gain 0.8 
+
+d2 $ spread ($) [slow 6, fast 8] $ sound "arpy" # note "4 3 3 4 3 3 3" # room 0.5 # size 1
+
+d3 $ every 2 (fast 1.1) $ sound "hc hc hc hc bassdm" # crush "0 1 0 1" # pan 0.5 # gain 1.4
+
+d4 $ striate 3 $ degradeBy 0.6 $ n (run 50) # s "cyclo" # gain 0.65 # pan 0.1
+
+d5 $ n "e ~ f? ~ e" # sound "gtr" # room 0.4 # size 0.3 # delay 0.4 # gain 0.3
+
+d5 $ spread ($) [brak, striate 2] $ n "c5 ~ c5 ~ c5" # sound "superhoover" # delay 0.4 # gain 0.6
+
+d5 $ spread ($) [brak, striate 2] $ n "" # sound "superhoover" # room 0.8 # size 0.6 # delay 0.4 # gain 0.7
+
+d5 $ striate 2 $ up "6 ~ 5? ~ 6" # n (run (irand 10)) # sound "superhoover" # room 0.8 # size 0.5 # delay 0.4 # gain 0.7
+
+d6 $ every 4 (fast 2) $ sound "bd*5" # n (irand 5) # delay 0.4 # gain 0.97
+
+d7 $ striate 2 $ up "6 ~ 5? ~ 6" # sound "[sn:2, bd] hc:2 sn:2 sn:3*10" # room 0.8 # size 0.6 # delay 0.4 # gain 0.7
+
+d7 silence
+
+--spread (chop) [1, 8, 1, 6]
+d8 $ striate 4 $ sound "[[sn, bd:4], [sn:5 sn sn:5 sn sn:5], bd:4]" # room 0.8 # size 0.6 # delay 0.4 # gain 0.7
+
+d6 $ sometimes (# room 20) # s "supergong" # n (run (rand*10)) 
+
+d8 silence
+
+d9 $ sound "bd hh bd hh bd hh bd hh bd hh" # gain 0.89
+
+d9 silence
+d8 $ sound "nastykick:1*10" # room 0.6 # si
+
+t1 (anticipateIn 4) $ n "c" $ sound "superpiano" # room 10
+t2 (anticipateIn 4) $ n "c" $ sound "superpiano" # room 10
+t3 (anticipateIn 4) $ n "c" $ sound "superpiano" # room 10
+t4 (anticipateIn 4) $ n "c" $ sound "superpiano" # room 10
+t5 (anticipateIn 4) $ n "c" $ sound "superpiano" # room 10
+t8 (anticipateIn 4) $ sound "superpiano" # n "c ~ e" # room 10
